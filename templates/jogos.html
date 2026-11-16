@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Jogos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body background="/static/fundo (3).png">
+<div class="qua">
+    <h1>Cadastro de Jogos</h1>
+
+    <p>Nesta página você poderá cadastrar seus jogos favoritos. Informe o título do jogo, a plataforma em que ele está disponível, o ano de lançamento e seu preço.</p>
+
+    <form action="/jogo/enviar" method="POST">
+
+        <label>Título:</label>
+        <input type="text" name="titulo" maxlength="100" required>
+
+        <label>Plataforma:</label>
+        <input type="text" name="plataforma" maxlength="50" required>
+
+        <label>Ano:</label>
+        <input type="number" name="ano" required>
+
+        <label>Preço:</label>
+        <input type="number" name="preco" step="0.01" required>
+
+        <button type="submit">Cadastrar Jogo</button>
+
+    </form>
+
+    <h2>Jogos cadastrados</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Título</th>
+            <th>Plataforma</th>
+            <th>Ano</th>
+            <th>Preço</th>
+            <th>Ações</th>
+        </tr>
+
+        {% for jogo in jogo %}
+        <tr>
+            <td>{{ jogo[0] }}</td>
+            <td>{{ jogo[1] }}</td>
+            <td>{{ jogo[2] }}</td>
+            <td>{{ jogo[3] }}</td>
+            <td>{{ jogo[4] }}</td>
+
+            <td class="acoes">
+                <a class="botao editar" href="/jogo/editar/{{ jogo[0] }}">Editar</a>
+
+                <form action="/jogo/excluir/{{ jogo[0] }}" method="POST">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+
+        {% else %}
+        <tr>
+            <td colspan="6">Nenhum jogo cadastrado.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <div class="di">
+        <a class="botao ini" href="/">Voltar para o início</a>
+    </div>
+</div>
+</body>
+</html>

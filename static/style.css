@@ -1,0 +1,227 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+    color: #222;
+}
+
+h1 {
+    color: #0e6722;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 12px;
+    box-sizing: border-box;
+}
+
+button,
+.botao {
+    background: #0e6722;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.botao.editar {
+    background: #0b7798;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #f3f3f3;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+.acoes form {
+    display: inline;
+}
+.acoes {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.acoes a,
+.acoes button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.editar {
+    background-color: #0b7798;
+}
+
+.acoes button {
+    background-color: #0e6722;
+}
+
+.acoes form {
+    margin: 0;
+}
+
+.qua {
+    margin: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px #afafaf;
+}
+
+.di {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 0 16px;
+    color: #222;
+    background-image: url("/static/fundo (3).png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+h1, h2 {
+    color: #0e6722;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button,
+.botao {
+    background: #0e6722;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+button:hover,
+.botao:hover {
+    opacity: 0.9;
+}
+
+.botao.editar {
+    background: #0b7798;
+}
+
+.botao.ini {
+    background: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #f3f3f3;
+}
+
+.acoes {
+    white-space: nowrap;
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.acoes form {
+    display: inline;
+    margin: 0;
+}
+
+.acoes a,
+.acoes button {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.editar {
+    background-color: #0b7798;
+}
+
+.acoes button {
+    background-color: #c62828;
+}
+
+.qua {
+    margin: 30px auto;
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.di {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+}

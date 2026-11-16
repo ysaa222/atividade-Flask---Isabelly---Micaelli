@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Jogador</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Editar Jogador #{{ jogador[0] }}</h1>
+
+<form action="/jogadores/atualizar/{{ jogador[0] }}" method="POST">
+
+    <label>Nick</label>
+    <input type="text" name="nick" maxlength="100" value="{{ jogador[1] }}" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" maxlength="100" value="{{ jogador[2] }}" required>
+
+    <label>Nível</label>
+    <input type="number" name="nivel" value="{{ jogador[3] }}" required>
+
+    <label>Data de Cadastro</label>
+    <input type="date" name="data_cadastro" value="{{ jogador[4] }}" required>
+
+    <button type="submit">Salvar alterações</button>
+
+    <a href="/jogadores">Cancelar</a>
+
+</form>
+
+</body>
+</html>

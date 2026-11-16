@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Jogadores</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="qua">
+    <h1>Cadastro de Jogadores</h1>
+
+    <p>Nesta página você poderá cadastrar os jogadores do sistema. Informe o nick, o e-mail, o nível atual e a data de cadastro.</p>
+
+    <form action="/jogadores/enviar" method="POST">
+
+        <label>Nick:</label>
+        <input type="text" name="nick" maxlength="100" required>
+
+        <label>E-mail:</label>
+        <input type="email" name="email" maxlength="100" required>
+
+        <label>Nível:</label>
+        <input type="number" name="nivel" required>
+
+        <label>Data de Cadastro:</label>
+        <input type="date" name="data_cadastro" required>
+
+        <button type="submit">Cadastrar Jogador</button>
+
+    </form>
+
+    <h2>Jogadores cadastrados</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Nick</th>
+            <th>E-mail</th>
+            <th>Nível</th>
+            <th>Data de Cadastro</th>
+            <th>Ações</th>
+        </tr>
+
+        {% for jogador in jogadores %}
+        <tr>
+            <td>{{ jogador[0] }}</td>
+            <td>{{ jogador[1] }}</td>
+            <td>{{ jogador[2] }}</td>
+            <td>{{ jogador[3] }}</td>
+            <td>{{ jogador[4] }}</td>
+
+            <td class="acoes">
+                <a class="botao editar" href="/jogadores/editar/{{ jogador[0] }}">Editar</a>
+
+                <form action="/jogadores/excluir/{{ jogador[0] }}" method="POST">
+                    <button type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+
+        {% else %}
+        <tr>
+            <td colspan="6">Nenhum jogador cadastrado.</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br>
+    <div class="di">
+        <a class="botao ini" href="/">Voltar para o início</a>
+    </div>
+</body>
+</html>

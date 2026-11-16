@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Jogo</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body background="/fundo%20(3).png">
+<div class="qua">
+    <h1>Editar Jogo #{{ jogo[0] }}</h1>
+
+    <form action="/jogo/atualizar/{{ jogo[0] }}" method="POST">
+
+        <label>Título</label>
+        <input type="text" name="titulo" maxlength="100" value="{{ jogo[1] }}" required>
+
+        <label>Plataforma</label>
+        <input type="text" name="plataforma" value="{{ jogo[2] }}" required>
+
+        <label>Ano</label>
+        <input type="number" name="ano" value="{{ jogo[3] }}" required>
+
+        <label>Preço</label>
+        <input type="number" name="preco" step="0.01" value="{{ jogo[4] }}" required>
+
+        <button type="submit">Salvar alterações</button>
+
+        <a href="/jogo">Cancelar</a>
+
+    </form>
+</div>
+</body>
+</html>
